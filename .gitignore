@@ -43,6 +43,7 @@ vignettes/*.pdf
 *.dylib
 *.slo
 *.obj
+*.o
 
 # Prerequisites
 *.d
