@@ -1,12 +1,17 @@
-Package: RCgo
+Package: RCgoHello
 Type: Package
-Title: Tiny Exsample Using CGO with `Rcpp`
+Title: Tiny Example Using CGO with 'Rcpp'
 Version: 0.0.0.900
 Authors@R: c(
     person("Kato", "Akiru", email = "paithiov909@gmail.com", role = c("aut", "cre"))
   )
-Description: A small exsample that shows how to use CGO-built shared libraries
-  from Rcpp functions.
+Description: A small example that shows how to use CGO-built shared libraries
+  from Rcpp function.
 SystemRequirements: go, GNU make, GNU GCC, C++11
-Imports: Rcpp (>= 1.0.5)
-LinkingTo: Rcpp
+Imports: 
+    Rcpp (>= 1.0.5)
+LinkingTo: 
+    Rcpp (>= 1.0.5)
+License: MIT + file LICENSE
+Encoding: UTF-8
+RoxygenNote: 7.1.1
