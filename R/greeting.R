@@ -1,4 +1,4 @@
-# ` Hello world from CGO via Rcpp
+#' Hello world from CGO via Rcpp
 #'
 #' An example function.
 #'

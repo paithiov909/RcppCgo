@@ -2,7 +2,7 @@
 % Please edit documentation in R/greeting.R
 \name{greet}
 \alias{greet}
-\title{An example function.}
+\title{Hello world from CGO via Rcpp}
 \usage{
 greet(message = "World")
 }
