@@ -6,25 +6,19 @@ CXX_STD = CXX11
 CXX11 = "g++"
 PKG_CPPFLAGS += -I'$(CURDIR)'
 PKG_CXXFLAGS += -DRCPP_PARALLEL_USE_TBB=1 -DDLL_IMPORT -DSTRICT_R_HEADERS
-
-ifeq "$(WIN)" "64"
-	PKG_LIBS = -L../inst/libs/x64 -lm -llibrcgo
-else
-	PKG_LIBS = -L../inst/libs/i386 -lm -llibrcgo
-endif
+PKG_LIBS += -L../inst/libs$(R_ARCH) -lm -lrcgo
 
 .PHONY: all
 
-all: $(SHLIB)
-$(SHLIB): build copy
+all:  build copy $(SHLIB)
 
 build:
 	$(GOFMT) github.com/paithiov909/main
 	$(GOFMT) github.com/paithiov909/hello
-	GOOS="windows" GOPATH="$(GOPATH)" CXX="$(CXX11)" CGO_ENABLED=1 $(GOBUILD) -o librcgo$(SHLIB_EXT) -i -a -x -compiler gc -buildmode=c-shared github.com/paithiov909/main
+	GOOS="windows" GOPATH="$(GOPATH)" CXX="$(CXX11)" CGO_ENABLED=1 $(GOBUILD) -o librcgo.a -i -a -x -compiler gc -buildmode=c-archive github.com/paithiov909/main
 
 copy:
 	cd $(CURDIR)
-	rm -f ../inst/include/librcgo.h
 	cp librcgo.h ../inst/include
-	cp librcgo$(SHLIB_EXT) ../inst/libs$(R_ARCH)
+	@if [ ! -d ../inst/libs$(R_ARCH) ]; then mkdir -p ../inst/libs$(R_ARCH); fi
+	cp librcgo.a ../inst/libs$(R_ARCH)

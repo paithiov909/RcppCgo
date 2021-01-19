@@ -6,6 +6,6 @@
 #' @return Character vector
 #' @export
 greet <- function(message = "World") {
-  res <- .Call("_RCgoHello_hi", PACKAGE = "RCgoHello", as.character(message))
+  res <- .Call("_RcppCgo_hi", PACKAGE = "RcppCgo", as.character(message))
   return(res)
 }

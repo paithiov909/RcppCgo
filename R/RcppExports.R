@@ -2,10 +2,10 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 hi <- function(v) {
-    .Call('_RCgoHello_hi', PACKAGE = 'RCgoHello', v)
+    .Call(`_RcppCgo_hi`, v)
 }
 
 # Register entry points for exported C++ functions
 methods::setLoadAction(function(ns) {
-    .Call('_RCgoHello_RcppExport_registerCCallable', PACKAGE = 'RCgoHello')
+    .Call('_RcppCgo_RcppExport_registerCCallable', PACKAGE = 'RcppCgo')
 })

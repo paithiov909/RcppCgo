@@ -68,8 +68,7 @@ typedef struct { void *data; GoInt len; GoInt cap; } GoSlice;
 extern "C" {
 #endif
 
-
-extern char* Hi(GoString p0);
+extern char* Hi(GoString x);
 
 #ifdef __cplusplus
 }

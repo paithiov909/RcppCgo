@@ -34,6 +34,6 @@ Rcpp::CharacterVector hi(Rcpp::CharacterVector v) {
     return result;
   };
 
-  const Rcpp::CharacterVector result = sapply(v, func_obj) ;
+  const Rcpp::CharacterVector result = sapply(v, func_obj);
   return result;
 }

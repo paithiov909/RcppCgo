@@ -2,3 +2,4 @@
 
 export(greet)
 importFrom(Rcpp,sourceCpp)
+useDynLib(RcppCgo, .registration=TRUE)
