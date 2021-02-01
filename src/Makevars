@@ -15,6 +15,6 @@ build:
 
 copy:
 	@cd $(CURDIR)
-	@cp libkagome.h ../inst/include
+	@cp librcgo.h ../inst/include
 	@if [ ! -d ../inst/libs$(R_ARCH) ]; then mkdir -p ../inst/libs$(R_ARCH); fi
 	@cp librcgo.a ../inst/libs$(R_ARCH)
