@@ -13,12 +13,12 @@ PKG_LIBS += -L../inst/libs$(R_ARCH) -lm -lrcgo
 all:  build copy $(SHLIB)
 
 build:
-	$(GOFMT) github.com/paithiov909/main
-	$(GOFMT) github.com/paithiov909/hello
+	GOPATH="$(GOPATH)" $(GOFMT) github.com/paithiov909/main
+	GOPATH="$(GOPATH)" $(GOFMT) github.com/paithiov909/hello
 	GOOS="windows" GOPATH="$(GOPATH)" CXX="$(CXX11)" CGO_ENABLED=1 $(GOBUILD) -o librcgo.a -i -a -x -compiler gc -buildmode=c-archive github.com/paithiov909/main
 
 copy:
-	cd $(CURDIR)
-	cp librcgo.h ../inst/include
+	@cd $(CURDIR)
+	@cp librcgo.h ../inst/include
 	@if [ ! -d ../inst/libs$(R_ARCH) ]; then mkdir -p ../inst/libs$(R_ARCH); fi
-	cp librcgo.a ../inst/libs$(R_ARCH)
+	@cp librcgo.a ../inst/libs$(R_ARCH)

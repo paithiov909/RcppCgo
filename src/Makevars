@@ -14,7 +14,7 @@ build:
 	CXX="$(CXX11)" GOPATH="$(GOPATH)" CGO_ENABLED=1 $(GOBUILD) -o librcgo.a -i -a -x -compiler gc -buildmode=c-archive github.com/paithiov909/main
 
 copy:
-	cd $(CURDIR)
-	cp libkagome.h ../inst/include
+	@cd $(CURDIR)
+	@cp libkagome.h ../inst/include
 	@if [ ! -d ../inst/libs$(R_ARCH) ]; then mkdir -p ../inst/libs$(R_ARCH); fi
-	cp librcgo.a ../inst/libs$(R_ARCH)
+	@cp librcgo.a ../inst/libs$(R_ARCH)
