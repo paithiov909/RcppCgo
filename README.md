@@ -5,8 +5,7 @@
 
 <!-- badges: start -->
 
-[![Open Source
-Love](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+![R-Cgo](https://github.com/paithiov909/RcppCgo/workflows/R-Cgo/badge.svg)
 <!-- badges: end -->
 
 > Tiny Example Using CGO with ‘Rcpp’
