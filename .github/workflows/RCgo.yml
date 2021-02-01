@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [ $default-branch ]
 
-
 jobs:
   check:
     strategy:
@@ -29,10 +28,6 @@ jobs:
           install.packages(c("remotes", "rcmdcheck"))
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
-      - name: Prebuild
-        run: |
-          git submodule init
-          git submodule update --recommend-shallow --recursive
       - name: Check
         run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
         shell: Rscript {0}
