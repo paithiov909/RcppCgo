@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  check:
+  build:
     strategy:
       matrix:
         r-version: ['4.0.0']
