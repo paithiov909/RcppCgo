@@ -10,9 +10,8 @@ jobs:
   build:
     strategy:
       matrix:
-        platform: [ubuntu-latest]
         r-version: ['4.0.0']
-    runs-on: ${{ matrix.platform }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Set up Go
