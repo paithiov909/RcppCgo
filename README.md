@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![R-Cgo](https://github.com/paithiov909/RcppCgo/workflows/R-Cgo/badge.svg)](https://github.com/paithiov909/RcppCgo/actions)
+[![R-CMD-check](https://github.com/paithiov909/RcppCgo/workflows/R-CMD-check/badge.svg)](https://github.com/paithiov909/RcppCgo/actions)
 <!-- badges: end -->
 
 > Tiny Example Using CGO with ‘Rcpp’
