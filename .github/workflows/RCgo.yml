@@ -8,7 +8,7 @@ on:
 
 
 jobs:
-  build:
+  check:
     strategy:
       matrix:
         platform: [ubuntu-latest]
