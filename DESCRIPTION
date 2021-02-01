@@ -1,7 +1,7 @@
 Package: RcppCgo
 Type: Package
 Title: Tiny Example Using CGO with 'Rcpp'
-Version: 0.0.1.900
+Version: 0.0.1
 Authors@R: c(
     person("Kato", "Akiru", email = "paithiov909@gmail.com", role = c("aut", "cre"))
   )
