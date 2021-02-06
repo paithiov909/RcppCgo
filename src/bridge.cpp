@@ -10,8 +10,8 @@ using namespace Rcpp;
 //'
 //' This function bridges between Rcpp and librcgo.
 //'
-//' @param v character vector
-//' @return character vector
+//' @param v Character vector
+//' @return Character vector
 //'
 //' @export
 //'

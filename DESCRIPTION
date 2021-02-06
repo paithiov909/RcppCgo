@@ -1,7 +1,7 @@
 Package: RcppCgo
 Type: Package
 Title: Tiny Example Using CGO with 'Rcpp'
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: c(
     person("Kato", "Akiru", email = "paithiov909@gmail.com", role = c("aut", "cre"))
   )
@@ -13,4 +13,5 @@ SystemRequirements: Go, GNU make, GNU GCC, C++11
 Imports: 
     Rcpp
 LinkingTo: 
-    Rcpp
+    Rcpp,
+    cpp11
