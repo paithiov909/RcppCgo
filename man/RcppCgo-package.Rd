@@ -9,7 +9,7 @@
 A small example that shows how to use CGO-built archive from Rcpp.
 }
 \author{
-\strong{Maintainer}: Kato Akiru \email{paithiov909@gmail.com}
+\strong{Maintainer}: Akiru Kato \email{paithiov909@gmail.com}
 
 }
 \keyword{internal}

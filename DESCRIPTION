@@ -3,7 +3,7 @@ Type: Package
 Title: Tiny Example Using CGO with 'Rcpp'
 Version: 0.0.2
 Authors@R: c(
-    person("Kato", "Akiru", email = "paithiov909@gmail.com", role = c("aut", "cre"))
+    person("Akiru", "Kato", email = "paithiov909@gmail.com", role = c("aut", "cre"))
   )
 Description: A small example that shows how to use CGO-built archive from Rcpp.
 License: MIT + file LICENSE
@@ -14,4 +14,5 @@ Imports:
     Rcpp
 LinkingTo: 
     Rcpp,
+    RcppThread,
     cpp11

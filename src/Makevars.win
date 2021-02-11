@@ -1,11 +1,10 @@
-CURDIR = $(shell Rscript -e "cat(getwd())")
+CURDIR = $(shell "$(R_HOME)/bin$(R_ARCH_BIN)/Rscript.exe" -e "cat(getwd())")
 GOPATH = $(CURDIR)/go
-GOFMT = go fmt
 GOBUILD = go build
 CXX_STD = CXX11
-CXX11 = "g++"
+CXX11 = g++
 PKG_CPPFLAGS += -I'$(CURDIR)'
-PKG_CXXFLAGS += -DRCPP_PARALLEL_USE_TBB=1 -DDLL_IMPORT -DSTRICT_R_HEADERS
+PKG_CXXFLAGS += -DDLL_IMPORT
 PKG_LIBS += -L../inst/libs$(R_ARCH) -lm -lrcgo
 
 .PHONY: all
@@ -13,8 +12,6 @@ PKG_LIBS += -L../inst/libs$(R_ARCH) -lm -lrcgo
 all:  build copy $(SHLIB)
 
 build:
-	GOPATH="$(GOPATH)" $(GOFMT) github.com/paithiov909/main
-	GOPATH="$(GOPATH)" $(GOFMT) github.com/paithiov909/hello
 	GOOS="windows" GOPATH="$(GOPATH)" CXX="$(CXX11)" CGO_ENABLED=1 $(GOBUILD) -o librcgo.a -i -a -x -compiler gc -buildmode=c-archive github.com/paithiov909/main
 
 copy:
