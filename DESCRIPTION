@@ -1,7 +1,7 @@
 Package: RcppCgo
 Type: Package
 Title: Tiny Example Using CGO with 'Rcpp'
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: c(
     person("Akiru", "Kato", email = "paithiov909@gmail.com", role = c("aut", "cre"))
   )
@@ -14,5 +14,4 @@ Imports:
     Rcpp
 LinkingTo: 
     Rcpp,
-    RcppThread,
-    cpp11
+    RcppThread

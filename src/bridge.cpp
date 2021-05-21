@@ -1,9 +1,12 @@
 // [[Rcpp::plugins(cpp11)]]
 // [[Rcpp::depends(RcppThread)]]
+
 #define STRICT_R_HEADERS
 #define R_NO_REMAP
 #define RCPPTHREAD_OVERRIDE_THREAD 1
+
 #include <Rcpp.h>
+#include <RcppThread.h>
 #include <cstdlib>
 #include "../inst/include/librcgo.h"
 
